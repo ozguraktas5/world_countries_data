@@ -1,0 +1,16 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    margin: 0;
+}
+
+header > .title {
+    background-color: #EFEFF0;
+    padding: 0.5rem 0;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+header > .title > h1 {
+    color: orange;
+    letter-spacing: 2px;
+}
