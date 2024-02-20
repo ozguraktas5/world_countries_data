@@ -14,3 +14,15 @@ header > .title > h1 {
     color: orange;
     letter-spacing: 2px;
 }
+
+header > .buttons {
+    padding: 2rem 0;
+    
+}
+
+header > .buttons > .population, header > .buttons > .languages{
+    background-color: orange;
+    color: black;
+    border: none;
+    padding: 0.5rem 1rem;
+}
