@@ -1,28 +1,61 @@
 body {
-    font-family: "Montserrat", sans-serif;
-    text-align: center;
-    margin: 0;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  margin: 0;
 }
 
 header > .title {
-    background-color: #EFEFF0;
-    padding: 0.5rem 0;
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+  background-color: #efeff0;
+  padding: 0.5rem 0;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 header > .title > h1 {
-    color: orange;
-    letter-spacing: 2px;
+  color: orange;
+  letter-spacing: 2px;
 }
 
 header > .buttons {
-    padding: 2rem 0;
-    
+  padding: 2rem 0;
 }
 
-header > .buttons > .population, header > .buttons > .languages{
-    background-color: orange;
-    color: black;
-    border: none;
-    padding: 0.5rem 1rem;
+header > .buttons > .population,
+header > .buttons > .languages {
+  background-color: orange;
+  color: black;
+  border: none;
+  padding: 0.5rem 1rem;
+}
+
+main > .container {
+  background-color: #efeff0;
+  padding: 2rem;
+}
+
+main > .container > div {
+  display: flex;
+  align-items: center; /* Öğeleri dikey hizalar */
+  justify-content: space-between; /* Öğeleri yatay hizalar */
+  margin-bottom: 10px; /* Öğeler arası boşluk */
+}
+
+.country-name,
+.country-population {
+  flex: 1; /* Esnek büyüme */
+}
+
+.bar-container {
+  flex: 5; /* Bar konteynırının genişliği */
+  margin: 0 10px; /* Bar ile diğer içerikler arasındaki boşluk */
+  height: 30px; /* Bar yüksekliği */
+}
+
+.bar {
+  height: 100%; /* Barın tamamını doldurması */
+  width: 100%; /* Barın tam genişlikte olması */
+  border-radius: 5px; /* Barın köşelerinin yumuşatılması */
+}
+
+.container {
+  margin-top: 20px; /* Container ile önceki öğeler arası boşluk */
 }

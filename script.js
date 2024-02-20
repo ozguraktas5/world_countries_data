@@ -12,7 +12,31 @@ document.addEventListener("DOMContentLoaded", function () {
   container.innerHTML += "<br>";
   top10.forEach((country) => {
     const divItem = document.createElement("div");
-    divItem.textContent = `${country.name} - ${country.population}`;
+    divItem.className = "country-item";
+
+    // Ülke adını içeren div
+    const nameDiv = document.createElement("div");
+    nameDiv.textContent = country.name;
+    nameDiv.className = "country-name";
+    divItem.appendChild(nameDiv);
+
+    // Barı içeren div
+    const barDiv = document.createElement("div");
+    barDiv.className = "bar-container";
+    const bar = document.createElement("div");
+    bar.style.background = `linear-gradient(to right, orange ${
+      (country.population / top10[0].population) * 100
+    }%, transparent 0)`;
+    bar.className = "bar";
+    barDiv.appendChild(bar);
+    divItem.appendChild(barDiv);
+
+    // Nüfusu içeren div
+    const populationDiv = document.createElement("div");
+    populationDiv.textContent = country.population;
+    populationDiv.className = "country-population";
+    divItem.appendChild(populationDiv);
+
     container.appendChild(divItem);
   });
 
@@ -25,7 +49,31 @@ document.addEventListener("DOMContentLoaded", function () {
     container.innerHTML += "<br>";
     top10.forEach((country) => {
       const divItem = document.createElement("div");
-      divItem.textContent = `${country.name} - ${country.population}`;
+      divItem.className = "country-item";
+
+      // Ülke adını içeren div
+      const nameDiv = document.createElement("div");
+      nameDiv.textContent = country.name;
+      nameDiv.className = "country-name";
+      divItem.appendChild(nameDiv);
+
+      // Barı içeren div
+      const barDiv = document.createElement("div");
+      barDiv.className = "bar-container";
+      const bar = document.createElement("div");
+      bar.style.background = `linear-gradient(to right, orange ${
+        (country.population / top10[0].population) * 100
+      }%, transparent 0)`;
+      bar.className = "bar";
+      barDiv.appendChild(bar);
+      divItem.appendChild(barDiv);
+
+      // Nüfusu içeren div
+      const populationDiv = document.createElement("div");
+      populationDiv.textContent = country.population;
+      populationDiv.className = "country-population";
+      divItem.appendChild(populationDiv);
+
       container.appendChild(divItem);
     });
   });
@@ -58,7 +106,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
     top10Languages.forEach((language) => {
       const divItem = document.createElement("div");
-      divItem.textContent = `${language} - ${languagesCount[language]}`;
+
+      // Dil adını içeren div
+      const languageDiv = document.createElement("div");
+      languageDiv.textContent = language;
+      divItem.appendChild(languageDiv);
+
+      // Dil sayısını içeren div
+      const countDiv = document.createElement("div");
+      countDiv.textContent = languagesCount[language];
+      divItem.appendChild(countDiv);
+
+      // Barı oluştur
+      const bar = document.createElement("div");
+      bar.style.background = `linear-gradient(to right, orange ${
+        (languagesCount[language] / languagesCount[top10Languages[0]]) * 100
+      }%, transparent 0)`;
+      bar.style.height = "10px";
+      bar.style.marginTop = "5px";
+      divItem.appendChild(bar);
+
       container.appendChild(divItem);
     });
   });
